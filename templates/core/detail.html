@@ -1,0 +1,9 @@
+<h2> {{ list.title }}</h2>
+
+{%  if error_message %}<p><strong>{{  error_message }}</strong></p>{%  endif %}
+
+<ul>
+{% for task in list.task_set.all %}
+    <li><label for="task{{ forloop.counter }}">{{ task.task_text}}, <i>{{ task.due_date }}</i></label></li>
+{% endfor %}
+</ul>
