@@ -8,7 +8,6 @@ class TaskInLine(admin.TabularInline):
 
 
 class ListAdmin(admin.ModelAdmin):
-    #list_display = ('title', 'description')
     inlines = [TaskInLine]
     search_fields = ['title']
 
